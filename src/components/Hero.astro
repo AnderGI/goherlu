@@ -1,0 +1,65 @@
+---
+import infoSquare from "../assets/infoSquare.svg"
+import whatsapp from "../assets/whatsapp.svg"
+import RequestAQuoteButton from "./RequestAQuoteButton.astro";
+import WhatsappContactButton from "./WhatsappContactButton.astro";
+import OurServices from "./OurServices.astro";
+import Spacer from "./Spacer.astro";
+import ReasonsToChooseUs from "./ReasonsToChooseUs.astro";
+import FinalCallToAction from "./FinalCallToAction.astro";
+import Benefits from "./Benefits.astro";
+---
+
+<main class="py-16">
+    <!-- Contenedor de texto con ajuste de ancho máximo -->
+    <div class="w-full">
+
+        <div class="px-4">
+        <!-- Título Principal (H1) -->
+        <h1 class="text-4xl md:text-5xl font-extrabold text-[--color-text-main] leading-[1.1] mb-6">
+            Instalaciones y Reparaciones Eléctricas
+        </h1>
+
+        <!-- Subtítulo (Secundario) -->
+        <p class="text-lg md:text-xl text-[--color-text-main] opacity-80 mb-10 leading-relaxed">
+            Soluciones seguras, rápidas y profesionales para tu hogar o empresa. Más de 17 años garantizando eficiencia en el País Vasco.
+        </p>
+
+        </div>
+
+        <!-- Botones de Acción -->
+        <div class="flex flex-col gap-4 px-4">
+           <RequestAQuoteButton displayLogo={true}/>
+            <WhatsappContactButton />
+        </div>
+        <Spacer />
+        <OurServices />
+        <Spacer />
+        <Benefits />
+        <Spacer />
+        <FinalCallToAction />
+    </div>
+
+
+</main>
+
+<style>
+
+    main {
+        background: var(--color-bg-white);
+    }
+
+    a#gmailbtn {
+        background: var(--color-accent-yellow);
+        color: var(--color-text-main);
+    }
+
+    a#whatsappbtn {
+        background: var(--color-action-whatsapp);
+        color: var(--color-bg-white);
+    }
+
+    h1 {
+        color: var(--color-brand-blue);
+    }
+</style>

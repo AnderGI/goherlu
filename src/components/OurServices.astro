@@ -1,0 +1,75 @@
+---
+import RequestAQuoteButton from "./RequestAQuoteButton.astro";
+import Card from "./Card.astro";
+import thunderBolt from "../assets/thunderBolt.svg"
+import wrench from "../assets/wrench.svg"
+import building from "../assets/building.svg"
+import protection from "../assets/protection.svg"
+import lightbulb from "../assets/lightbulb.svg"
+import wires from "../assets/wires.svg"
+import time from "../assets/time.svg"
+import certificado from "../assets/certificado.svg"
+---
+<section class="w-screen py-16 px-6">
+    <!-- Título de la sección -->
+    <div class="text-center mb-12">
+        <h2 class="text-3xl font-extrabold text-[--color-brand-blue] mb-4">Nuestros servicios</h2>
+        <p class="text-[--color-text-main] opacity-80">
+            Ofrecemos soluciones eléctricas completas adaptadas a tus necesidades con la máxima garantía de calidad.
+        </p>
+    </div>
+
+    <!-- Contenedor de Tarjetas esto mirar si existen arrays o algo similar-->
+    <div class="flex flex-col gap-8 max-w-lg mx-auto">
+        <Card displayRequestAQuoteButton = {true} title="Instalaciones eléctricas" subtext="Instalaciones completas para viviendas, locales comerciales y naves industriales.">
+            <span slot="icon">
+                <img src={thunderBolt.src} class="w-10 h-10" alt="Icono" />
+            </span>
+        </Card>
+        <Card displayRequestAQuoteButton = {true} title="Reformas eléctricas" subtext="Actualización y modernización de instalaciones existentes">
+            <span slot="icon">
+                <img src={wrench.src} class="w-10 h-10" alt="Icono" />
+            </span>
+        </Card>
+        <Card displayRequestAQuoteButton = {true} title="Instalaciones en obra nueva" subtext="Proyectos eléctricos completos para construcciones nuevas">
+            <span slot="icon">
+                <img src={building.src} class="w-10 h-10" alt="Icono" />
+            </span>
+        </Card>
+        <Card displayRequestAQuoteButton = {true} title="Reparación de averías" subtext="Servicio rápido de reparación de fallos eléctricos">
+            <span slot="icon">
+                <img src={protection.src} class="w-10 h-10" alt="Icono" />
+            </span>
+        </Card>
+        <Card displayRequestAQuoteButton = {true} title="Mantenimiento preventivo" subtext="Revisiones periódicas para evitar averías y garantizar seguridad">
+            <span slot="icon">
+                <img src={time.src} class="w-10 h-10" alt="Icono" />
+            </span>
+        </Card>
+        <Card displayRequestAQuoteButton = {true} title="Iluminación LED y eficiencia" subtext="Diseño e instalación de sistemas de iluminación LED para reducir consumo y mejorar la calidad lumínica">
+            <span slot="icon">
+                <img src={lightbulb.src} class="w-10 h-10" alt="Icono" />
+            </span>
+        </Card>
+        <Card displayRequestAQuoteButton = {true} title="Instalaciones de telecomunicaciones" subtext="Cableado estructurado, redes de datos, fibra óptica y sistemas de telecomunicaciones">
+            <span slot="icon">
+                <img src={wires.src} class="w-10 h-10" alt="Icono" />
+            </span>
+        </Card>
+        <Card displayRequestAQuoteButton = {true} title="Boletines y certificaciones" subtext="Tramitación de certificados eléctricos, boletines y documentación necesaria para legalización">
+            <span slot="icon">
+                <img src={certificado.src} class="w-10 h-10" alt="Icono" />
+            </span>
+        </Card>
+    </div>
+</section>
+
+<style>
+    section {
+        background: var(--color-bg-gray);
+    }
+
+    h2 {
+        color: var(--color-brand-blue);
+    }
+</style>

@@ -1,14 +1,33 @@
-<header class="flex flex-row justify-between">
-    <div>
-        <span>Goherlu Logo</span>
-    </div>
-    <div>
-        <a href="tel:+34600000000">Llamar ahora</a>
+---
+// HeaderMobile.astro
+---
+<header class="bg-[--color-bg-white] border-b border-gray-200 sticky top-0 z-50">
+    <div class="flex justify-between items-center px-4 py-3">
+
+        <!-- Logo -->
+        <div class="flex-shrink-0">
+            <span class="text-xl font-bold">Goherlu</span>
+        </div>
+
+        <!-- Botón de Llamada (Urgencia) -->
+        <a
+                href="tel:+34XXXXXXXXX"
+                class="px-4 py-2 rounded-lg font-extrabold"
+                aria-label="Llamar para urgencias"
+        >
+            <span>Llamar ahora</span>
+        </a>
+
     </div>
 </header>
 
 <style>
     header {
         background: var(--color-bg-gray);
+    }
+
+    a {
+        background: var(--color-urgency-red);
+        color: var(--color-bg-white);
     }
 </style>

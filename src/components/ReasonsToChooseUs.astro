@@ -1,0 +1,51 @@
+---
+import Card from "./Card.astro";
+import Spacer from "./Spacer.astro";
+import thunderBolt from "../assets/thunderBolt.svg";
+import time from "../assets/time.svg";
+import protection from "../assets/protection.svg";
+import people from "../assets/people.svg";
+import doubleCheck from "../assets/doubleCheck.svg";
+---
+<section class="bg-[--color-bg-gray] py-20 px-6">
+    <div class="text-center mb-12">
+        <h2 class="text-3xl font-extrabold text-[--color-brand-blue] mb-4">
+            ¿Por qué elegirnos?
+        </h2>
+        <p class="text-[--color-text-main] opacity-80 max-w-sm mx-auto">
+            Compromiso inquebrantable con la calidad, la seguridad y la satisfacción del cliente
+        </p>
+    </div>
+
+    <div class="max-w-xs mx-auto">
+        <Card displayRequestAQuoteButton = {false} title="Rapidez" subtext="Respuesta en menos de 24 horas para urgencias">
+            <span slot="icon">
+                <img src={time.src} class="w-10 h-10" alt="Icono" />
+            </span>
+        </Card>
+        <Spacer />
+        <Card displayRequestAQuoteButton = {false} title="Experiencia" subtext="Más de 17 años en el sector turístico">
+             <span slot="icon">
+                <img src={protection.src} class="w-10 h-10" alt="Icono" />
+            </span>
+        </Card>
+        <Spacer />
+        <Card displayRequestAQuoteButton = {false} title="Profesionalidad" subtext="Técnicos certificados y cualificados">
+             <span slot="icon">
+                <img src={doubleCheck.src} class="w-10 h-10" alt="Icono" />
+            </span>
+        </Card>
+        <Spacer />
+        <Card displayRequestAQuoteButton = {false} title="Atención personalizada" subtext="Soluciones adaptadas a cada cliente">
+             <span slot="icon">
+                <img src={people.src} class="w-10 h-10" alt="Icono" />
+            </span>
+        </Card>
+    </div>
+</section>
+
+<style>
+    h2 {
+        color: var(--color-brand-blue);
+    }
+</style>

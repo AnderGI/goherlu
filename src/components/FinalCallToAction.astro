@@ -1,0 +1,32 @@
+---
+import RequestAQuoteButton from "./RequestAQuoteButton.astro";
+import WhatsappContactButton from "./WhatsappContactButton.astro";
+---
+<section class=" py-20 px-6 text-center">
+    <div class="max-w-xl mx-auto mb-10">
+        <h2 class="text-3xl md:text-4xl font-extrabold text-white mb-6 leading-tight">
+            ¿Necesitas un electricista profesional?
+        </h2>
+        <p class="text-white opacity-80 text-lg leading-relaxed">
+            Solicita tu presupuesto sin compromiso. Te respondemos en menos de 24 horas con la mejor solución para tu proyecto.
+        </p>
+    </div>
+
+    <div class="flex flex-col gap-4 max-w-sm mx-auto">
+
+        <RequestAQuoteButton displayLogo={true}/>
+        <WhatsappContactButton />
+    </div>
+</section>
+
+<style>
+    section {
+        background: var(--color-bg-gray);
+    }
+    h2 {
+        color: var(--color-brand-blue);
+    }
+    p {
+        color: var(--color-text-main);
+    }
+</style>
