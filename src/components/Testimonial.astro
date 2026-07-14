@@ -3,19 +3,24 @@
 const { name, role, quote } = Astro.props;
 ---
 
-<div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
-    <!-- Cabecera: Nombre y Rol (Resaltados) -->
+<div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow tracking-wide">
+
     <div class="mb-4">
-        <h3 class="text-lg font-bold text-[--color-brand-blue]">
+        <h3 class="text-lg font-bold">
             {name}
         </h3>
-        <p class="text-sm font-medium text-gray-500">
+        <p class="text-sm font-medium">
             {role}
         </p>
     </div>
 
-    <!-- Contenido: La reseña -->
-    <p class="text-base text-gray-700 leading-relaxed">
-        "{quote}"
+    <p class="text-base leading-relaxed italic font-normal">
+        {quote}
     </p>
 </div>
+
+<style>
+    h3, p {
+        color: var(--color-brand-blue);
+    }
+</style>
