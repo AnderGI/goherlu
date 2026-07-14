@@ -2,10 +2,26 @@
 import doubleCheck from "../assets/doubleCheck.svg"
 // Benefits.astro
 const benefits = [
-    { title: "Rapidez", desc: "Respuesta en menos de 24 horas para urgencias" },
-    { title: "Experiencia", desc: "Más de 17 años en el sector eléctrico" },
-    { title: "Profesionalidad", desc: "Técnicos certificados y cualificados" },
-    { title: "Atención personalizada", desc: "Soluciones adaptadas a cada cliente" }
+    {
+        emoji: "⚡",
+        title: "Respuesta en <24h",
+        desc: "Solucionamos tu urgencia hoy mismo."
+    },
+    {
+        emoji: "🛠️",
+        title: "+17 años de oficio",
+        desc: "Cero experimentos con tus cables."
+    },
+    {
+        emoji: "📜",
+        title: "Técnicos homologados",
+        desc: "Seguridad y garantía oficial."
+    },
+    {
+        emoji: "💰",
+        title: "Presupuesto cerrado",
+        desc: "Sin sorpresas ni letra pequeña."
+    }
 ];
 ---
 
@@ -15,11 +31,8 @@ const benefits = [
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
         {benefits.map(item => (
                 <div class="flex items-center gap-4 p-4">
-                    <div class="text-[--color-brand-blue]">
-                        <img src={doubleCheck.src} class="w-10 h-10" alt="Icono" />
-                    </div>
                     <div>
-                        <h3 class="font-bold text-[--color-brand-blue]">{item.title}</h3>
+                        <h3 class="font-bold text-[--color-brand-blue]">{item.emoji} {item.title}</h3>
                         <p class="text-sm text-[--color-text-main] opacity-70">{item.desc}</p>
                     </div>
                 </div>

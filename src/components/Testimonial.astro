@@ -1,0 +1,21 @@
+---
+// Props para reutilizar
+const { name, role, quote } = Astro.props;
+---
+
+<div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
+    <!-- Cabecera: Nombre y Rol (Resaltados) -->
+    <div class="mb-4">
+        <h3 class="text-lg font-bold text-[--color-brand-blue]">
+            {name}
+        </h3>
+        <p class="text-sm font-medium text-gray-500">
+            {role}
+        </p>
+    </div>
+
+    <!-- Contenido: La reseña -->
+    <p class="text-base text-gray-700 leading-relaxed">
+        "{quote}"
+    </p>
+</div>

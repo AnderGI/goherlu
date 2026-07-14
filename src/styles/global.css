@@ -2,11 +2,11 @@
 @import 'tailwind-animations';
 
 :root {
-    --color-brand-blue: #1E3A8A;
-    --color-text-main: #0F172A;
+    --color-brand-blue: #0F1E36;
+    --color-text-main: #0F1E36;
     --color-action-whatsapp: #25D366;
-    --color-accent-yellow: #FFC107;
-    --color-urgency-red:#DC2626;
+    --color-accent-yellow: #FF6B00;
+    --color-urgency-red:#FF4500;
     --color-bg-white: #FFFFFF;
-    --color-bg-gray: #F3F4F6;
+    --color-bg-gray: #F4F6F9;
 }
