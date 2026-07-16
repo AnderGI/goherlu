@@ -1,5 +1,4 @@
 ---
-// RequestAQuoteButton.astro
 import infoSquare from "../assets/infoSquare.svg"
 
 interface Props {
@@ -7,25 +6,24 @@ interface Props {
     isVisible?: boolean;
 }
 
-const { displayLogo = true, isVisible = true } = Astro.props;
+const { isVisible = true } = Astro.props;
 ---
-
+<!--
+class="flex items-center justify-center
+w-full max-w-sm mx-auto py-5 rounded-lg font-extrabold tracking-wide text-center transition-all duration-200 shadow-lg"
+-->
 {isVisible && (
-<a id="gmailbtn" href="mailto:agibarguen@gmail.com"
-   class="flex items-center justify-center gap-2 font-extrabold py-4 px-8 rounded-xl text-center shadow-lg active:scale-[0.98] transition-all text-lg">
+<a id="gmailbtn" href="mailto:info@electricidadgoherlu.com"
+   class="font-extrabold py-3 px-6 rounded-xl text-center shadow-lg active:scale-[0.98] transition-all text-md tracking-wide">
 
-    <span>Solicitar presupuesto</span>
-    <img
-            src={infoSquare.src}
-            alt="solicitar presupuesto"
-            class={`w-6 h-6 ${!displayLogo ? 'hidden' : ''}`}
-    />
+    <span>SOLICITA TU PRESUPUESTO</span>
+
 </a>
     )}
 
 <style>
     a#gmailbtn {
-        background: var(--color-accent-yellow);
-        color: var(--color-text-main);
+        background-color: var(--color-urgency-red);
+        color: white;
     }
 </style>

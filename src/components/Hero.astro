@@ -10,21 +10,22 @@ import FinalCallToAction from "./FinalCallToAction.astro";
 import Benefits from "./Benefits.astro";
 import CallNowButton from "./CallNowButton.astro";
 import Testimonial from "./Testimonial.astro";
+import TrustAndAction from "./TrustAndAction.astro";
 ---
 
-<main class="py-16 px-4">
+<main class="py-16">
     <div class="flex flex-col w-full">
 
-            <h1 class="text-4xl font-bold mb-6 flex flex-col justify-center content-center">
+            <h1 class="text-4xl font-bold mb-6 flex flex-col justify-center content-center px-4">
                 <span>Tu instalación,</span>
                 <span>sin preocupaciones.</span>
             </h1>
-            <p class="text-lg md:text-xl text-[--color-text-main] opacity-80 mb-10 leading-relaxed">
+            <p class="text-lg md:text-xl text-[--color-text-main] opacity-80 mb-10 leading-relaxed px-4">
                 17 años de experiencia en el País Vasco.
             </p>
             <CallNowButton />
 
-        <section class="py-16 flex flex-col gap-3">
+        <section class="py-16 flex flex-col gap-3 px-4">
             <Testimonial
                     name="Iker Etxebarria"
                     role="Construcciones Arana"
@@ -47,6 +48,7 @@ import Testimonial from "./Testimonial.astro";
                     quote="Reformaron toda la instalación eléctrica de mi casa. Muy contentos con el resultado, ahora todo funciona perfectamente."
             />
         </section>
+        <TrustAndAction />
 
     </div>
 </main>
