@@ -1,25 +1,9 @@
----
-import infoSquare from "../assets/infoSquare.svg"
-
-interface Props {
-    displayLogo?: boolean;
-    isVisible?: boolean;
-}
-
-const { isVisible = true } = Astro.props;
----
-<!--
-class="flex items-center justify-center
-w-full max-w-sm mx-auto py-5 rounded-lg font-extrabold tracking-wide text-center transition-all duration-200 shadow-lg"
--->
-{isVisible && (
 <a id="gmailbtn" href="mailto:info@electricidadgoherlu.com"
    class="font-extrabold py-3 px-6 rounded-xl text-center shadow-lg active:scale-[0.98] transition-all text-md tracking-wide">
 
     <span>SOLICITA TU PRESUPUESTO</span>
 
 </a>
-    )}
 
 <style>
     a#gmailbtn {

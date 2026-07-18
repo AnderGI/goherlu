@@ -3,31 +3,35 @@ import RequestAQuoteButton from "./RequestAQuoteButton.astro";
 import WhatsappContactButton from "./WhatsappContactButton.astro";
 ---
 
-<section class="py-12 px-6 sm:px-8 md:px-16 lg:px-32 xl:px-64 2xl:px-128 bg-[var(--color-bg-gray)] text-[var(--color-brand-blue)]">
+<section class="py-12 px-6 sm:px-8 md:px-16 lg:px-32 xl:px-64 2xl:px-128 bg-[var(--color-bg-gray)] text-[var(--color-brand-blue)] flex justify-evenly">
+        <div>
+            <h3 class="text-3xl font-black mb-6 leading-tight flex flex-col">
+                <div>Instalaciones <span class="text-[var(--color-urgency-red)]">certificadas</span>,</div>
+                <div>bajo <span class="text-[var(--color-urgency-red)]">normativa.</span></div>
+            </h3>
 
-        <h3 class="text-3xl font-black mb-6 leading-tight flex flex-col">
-            <div>Instalaciones <span class="text-[var(--color-urgency-red)]">certificadas</span>,</div>
-            <div>bajo <span class="text-[var(--color-urgency-red)]">normativa.</span></div>
-        </h3>
-
-        <!--
-        <p class="text-gray-700 mb-8 leading-relaxed">
-            Trabajamos bajo el estricto cumplimiento del <strong>Reglamento Electrotécnico (REBT)</strong>. Garantizamos seguridad técnica y legalidad en cada instalación.
-        </p>
-        -->
-
-        <div class="space-y-3 mb-8">
-            {['Certificación Oficial REBT', 'Boletines de alta rápida', 'Inspecciones técnicas detalladas'].map((item) => (
+            <div class="flex space-y-3 mb-8 justify-between">
+                <div>
                     <div class="flex items-center gap-3">
-                        <span class="font-bold text-gray-800">{item}</span>
+                        <span class="font-bold text-gray-800">Certificación Oficial REBT</span>
                     </div>
-            ))}
+                    <div class="flex items-center gap-3">
+                        <span class="font-bold text-gray-800">Boletines de alta rápida</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="font-bold text-gray-800">Inspecciones técnicas detalladas</span>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="flex flex-col gap-4 lg:hidden">
+                <RequestAQuoteButton />
+                <WhatsappContactButton />
+            </div>
         </div>
-
-
-        <div class="flex flex-col gap-4">
+        <div class="hidden lg:flex flex-col gap-4 justify-center">
             <RequestAQuoteButton />
             <WhatsappContactButton />
         </div>
-
 </section>
