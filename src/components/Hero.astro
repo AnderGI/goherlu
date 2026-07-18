@@ -11,58 +11,19 @@ import Benefits from "./Benefits.astro";
 import CallNowButton from "./CallNowButton.astro";
 import Testimonial from "./Testimonial.astro";
 import TrustAndAction from "./TrustAndAction.astro";
+import HeaderTitle from "./HeaderTitle.astro";
+import Testimonials from "./Testimonials.astro";
 ---
 
-<main class="py-16">
-    <div class="flex flex-col w-full">
-
-            <h1 class="text-4xl font-bold mb-6 flex flex-col justify-center content-center px-4">
-                <span>Tu instalación,</span>
-                <span>sin preocupaciones.</span>
-            </h1>
-            <p class="text-lg md:text-xl text-[--color-text-main] opacity-80 mb-10 leading-relaxed px-4">
-                17 años de experiencia en el País Vasco.
-            </p>
-            <CallNowButton />
-
-        <section class="py-16 flex flex-col gap-3 px-4">
-            <Testimonial
-                    name="Iker Etxebarria"
-                    role="Construcciones Arana"
-                    quote="Excelente servicio. Vinieron rápido, diagnosticaron el problema y lo solucionaron en el mismo día. Muy profesionales y atentos."
-            />
-
-            <Testimonial
-                    name="Jon Garitano"
-                    role="Talleres Mendizabal"
-                    quote="Llevamos años trabajando con ellos para el mantenimiento de nuestras instalaciones. Siempre disponibles y resolutivos."
-            />
-            <Testimonial
-                    name="Amaia Zubieta"
-                    role="Hostal Txoko"
-                    quote="Hicieron toda la instalación eléctrica de nuestro nuevo local. Trabajo impecable, cumplieron los plazos y el precio fue muy ajustado."
-            />
-            <Testimonial
-                    name="Leire Aranburu"
-                    role="Particular"
-                    quote="Reformaron toda la instalación eléctrica de mi casa. Muy contentos con el resultado, ahora todo funciona perfectamente."
-            />
-        </section>
+<main class="flex flex-col w-full py-16 sm:px-8 md:px-16 lg:px-32 xl:px-64 2xl:px-128">
+        <HeaderTitle />
+        <CallNowButton />
+        <Testimonials />
         <TrustAndAction />
-
-    </div>
 </main>
 
 <style>
-
     main > div {
         padding-top: 5rem;
-    }
-    h1 {
-        color: var(--color-brand-blue);
-        text-align: left;
-    }
-    h1 span:last-child {
-        color: var(--color-urgency-red);
     }
 </style>
