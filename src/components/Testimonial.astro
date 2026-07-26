@@ -1,26 +1,29 @@
 ---
-// Props para reutilizar
 const { name, role, quote } = Astro.props;
 ---
 
-<div class="bg-white border border-gray-100 p-6 rounded-2xl shadow-sm tracking-wide">
+<div class="testimonial bg-white border border-gray-100 px-8 py-10 tracking-wide leading-relaxed">
 
     <div class="mb-4">
-        <h3 class="text-lg font-bold">
+        <h3 class="text-2xl font-bold">
             {name}
         </h3>
-        <p class="text-sm font-medium">
+        <p class="text-lg font-normal mt-3">
             {role}
         </p>
     </div>
 
-    <p class="text-base leading-relaxed italic font-normal">
+    <p class="text-base italic font-normal">
         {quote}
     </p>
 </div>
 
 <style>
-    h3, p {
+    .testimonial {
         color: var(--color-brand-blue);
+        background-color: var(--color-brand-white);
+        min-height: fit-content;
+        box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
     }
+
 </style>
