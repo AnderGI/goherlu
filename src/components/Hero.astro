@@ -11,20 +11,17 @@ import Benefits from "./Benefits.astro";
 import CallNowButton from "./CallNowButton.astro";
 import Testimonial from "./Testimonial.astro";
 import TrustAndAction from "./TrustAndAction.astro";
-import HeaderTitle from "./HeaderTitle.astro";
 import Testimonials from "./Testimonials.astro";
 import CTARequestAQuoteButton from "./CTARequestAQuoteButton.astro";
+import { LightRays } from "@/components/ui/light-rays"
 ---
 
 <main class="flex flex-col w-full py-16">
         <div class="sm:px-8 md:px-16 lg:px-32 xl:px-64 2xl:px-128 3xl:px-1">
-                <HeaderTitle />
-                <CallNowButton />
-                <CTARequestAQuoteButton />
                 <Testimonials />
         </div>
-        <div>
-                <TrustAndAction />
+        <div  className="relative w-full overflow-hidden rounded-xl border">
+
         </div>
 </main>
 

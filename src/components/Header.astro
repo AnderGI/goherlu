@@ -1,0 +1,61 @@
+---
+import CTARequestAQuoteButton from "./CTARequestAQuoteButton.astro";
+---
+<header class="h-screen relative flex flex-col justify-center content-center">
+    <div class="overlay absolute"></div>
+    <div class="container relative leading-relaxed px-4 md:px-8 lg:px-16 xl:px-32 2xl:px-64">
+        <h1 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6 flex flex-col justify-center content-center">
+            Tu instalación,
+            <span class="highlight-box px-4 py-0.5 pb-4 mt-5 inline-block">sin preocupaciones.</span>
+        </h1>
+        <p class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl mb-20 font-medium">
+            Soluciones seguras, rápidas y eficaces para empresas y particulares en el País Vasco. Más de 17 años de experiencia garantizada.
+        </p>
+        <CTARequestAQuoteButton />
+    </div>
+</header>
+
+
+
+
+
+<style>
+    header {
+        background: url("../assets/cuadro electrico.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .overlay {
+        inset: 0;
+        background:
+                radial-gradient(ellipse at center, rgba(0, 0, 0, 0.2) 20%, rgba(15, 30, 54, 0.85) 100%),
+                linear-gradient(to right, rgba(15, 30, 54, 0.95) 0%, rgba(15, 30, 54, 0.6) 50%, rgba(15, 30, 54, 0.3) 100%);
+        z-index: 1;
+    }
+
+    .container {
+        max-width: max-content;
+        z-index: 2;
+    }
+
+    h1 {
+        color: var(--color-brand-white);
+        text-align: left;
+    }
+
+    p, h1 span:last-child {
+        color: var(--color-brand-white);
+    }
+
+    p {
+        opacity: 90%;
+    }
+
+    .highlight-box {
+        background-color: var(--color-urgency-red);
+        width: fit-content;
+    }
+</style>
+
