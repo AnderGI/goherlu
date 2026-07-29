@@ -4,7 +4,9 @@ import CTARequestAQuoteButton from "./CTARequestAQuoteButton.astro";
 <section class="leading-relaxed px-4 py-16">
     <div class="flex flex-col items-center justify-center text-center">
         <h2 class="text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold font-bold mb-6 leading-tight">
-            ¿Necesitas un electricista profesional?
+            ¿Necesitas un
+            <span class="highlighter text-white px-2 py-0.5 inline-block leading-tight">electricista profesional</span>
+            ?
         </h2>
         <p class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl mb-20 font-medium">
             Solicita tu presupuesto sin compromiso. Te respondemos en menos de 24 horas con la mejor solución para tu proyecto.
@@ -22,5 +24,8 @@ import CTARequestAQuoteButton from "./CTARequestAQuoteButton.astro";
     }
     h2, p {
         color: var(--color-brand-white);
+    }
+    .highlighter {
+        background: var(--color-urgency-red);
     }
 </style>
