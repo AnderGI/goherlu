@@ -17,13 +17,15 @@ const {title, features} = Astro.props;
         <!-- Included Features / Services List (No Icons/SVGs) -->
         <div class="
         pt-5 border-t border-[var(--color-bg-gray)]">
-            <p class="text-xs font-bold uppercase tracking-wider text-[var(--color-brand-blue)]/60 mb-4">
+            <p class="text-sm font-bold uppercase tracking-wider text-[var(--color-brand-blue)]/80 mb-4">
                 Lo que incluye:
             </p>
 
             <ul class="space-y-3">
                 {features.map((feature, i) => (
-                        <li class="flex items-start gap-3 text-sm text-[var(--color-brand-blue)]/90 leading-snug">
+                        <li class="flex items-start gap-3
+                        text-md md:text-lg
+                        text-[var(--color-brand-blue)]/90 leading-snug">
                             <span>{feature}</span>
                         </li>
                 ))}
