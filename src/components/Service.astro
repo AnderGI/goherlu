@@ -1,11 +1,10 @@
 ---
 interface Props {
     title: string;
-    description: string;
     features: string[];
 }
 
-const {title, description, features} = Astro.props;
+const {title, features} = Astro.props;
 
 ---
 <div class="bg-[var(--color-bg-white)] p-8 shadow-xl text-[var(--color-text-main)] flex flex-col justify-between max-w-md border-t-4 border-[var(--color-accent-yellow)]">
@@ -14,10 +13,6 @@ const {title, description, features} = Astro.props;
         <h3 class="
             text-3xl
             font-bold text-[var(--color-brand-blue)] mb-3 leading-snug">{title}</h3>
-
-        <p class="
-            text-sm md:text-md lg:text-xl
-            leading-relaxed text-[var(--color-brand-blue)]/80 mb-6">{description}</p>
 
         <!-- Included Features / Services List (No Icons/SVGs) -->
         <div class="
